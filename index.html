@@ -98,6 +98,24 @@
             padding: 2rem;
             color: #64748b;
         }
+
+
+        .skills img {
+    position: relative;
+}
+
+.skills img:hover::after {
+    content: attr(alt);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 3px 8px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+}
     </style>
 </head>
 
@@ -141,6 +159,34 @@
 
             </div>
         </section>
+        <!-- Skills -->
+<section class="section">
+    <h2>Skills</h2>
+
+    <div class="skills">
+
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
+
+        <!-- FastAPI (no está en devicon, usamos SVG externo) -->
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/fastapi.svg" alt="FastAPI">
+
+        <!-- n8n -->
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/n8n.svg" alt="n8n">
+
+        <!-- Supabase -->
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/supabase.svg" alt="Supabase">
+
+        <!-- Evolution API (si decides incluirlo) -->
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openapiinitiative.svg" alt="Evolution API">
+
+    </div>
+</section>
 
         <!-- Contacto -->
         <section class="section contact">
