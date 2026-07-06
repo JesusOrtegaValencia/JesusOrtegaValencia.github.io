@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.png" type="image/png">
-    <title>Jesus Ortega </title>
-    <meta name="description" content="Estudiante de Ingenieria en Ciencia de Datos, interesado en herramientas de automatización como n8n">
+    <title>Jesus Ortega</title>
+    <meta name="description"
+        content="Estudiante de Ingeniería en Ciencia de Datos, interesado en herramientas de automatización como n8n">
     <link rel="canonical" href="https://jesusortega.tech/">
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -24,49 +25,286 @@
       ]
     }
     </script>
+
     <style>
-        .main_information{
-            text-align: center;
+        /* ========================= */
+        /* RESET */
+        /* ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h1{
-            text-align: center;
+
+        /* ========================= */
+        /* BODY (STICKY FOOTER FIX) */
+        /* ========================= */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        .skills {
-            margin: 0 auto;
+
+        /* ========================= */
+        /* CONTENEDOR */
+        /* ========================= */
+
+        .container {
+            width: 95%;
+            max-width: 1100px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+
+            flex: 1;
+        }
+
+        /* ========================= */
+        /* TEXTO */
+        /* ========================= */
+
+        h1 {
+            font-size: clamp(1.8rem, 4vw, 3.5rem);
+            white-space: nowrap;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: clamp(.95rem, 2vw, 1.05rem);
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .small {
+            margin-top: 45px; /* Un poco más de separación por los iconos grandes */
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* ========================= */
+        /* ICONOS (¡MÁS GRANDES!) */
+        /* ========================= */
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px; /* Más espacio entre iconos grandes */
+            margin-top: 35px;
+        }
+
+        .icon-card {
+            width: 120px;  /* Aumentado de 90px a 120px */
+            height: 120px; /* Aumentado de 90px a 120px */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 18px; /* Bordes ligeramente más suaves para el nuevo tamaño */
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .1);
+            transition: .3s;
+        }
+
+        .icon-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, .15);
+        }
+
+        .icon-card img {
+            max-width: 70%;  /* Incrementado un poco para aprovechar el cuadro */
+            max-height: 70%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* ========================= */
+        /* FOOTER */
+        /* ========================= */
+
+        footer {
+            width: 100%;
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 15px;
+            margin-top: auto;
+        }
+
+        footer section {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        footer h2 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #d6d6d6;
+            font-size: .95rem;
+            margin: 5px 0;
+        }
+
+        footer a {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 18px;
+            background: #4f46e5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        footer a:hover {
+            background: #3730a3;
+            transform: translateY(-2px);
+        }
+
+        footer hr {
+            width: 70%;
+            max-width: 500px;
+            margin: 18px auto;
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, .2);
+        }
+
+        footer>p:last-child {
+            color: #aaa;
+            font-size: .85rem;
+        }
+
+        /* ========================= */
+        /* TABLET */
+        /* ========================= */
+
+        @media (max-width:768px) {
+            .container {
+                width: 95%;
+                padding: 30px;
+            }
+
+            .icon-card {
+                width: 100px; /* Proporcional para tablets */
+                height: 100px;
+            }
+        }
+
+        /* ========================= */
+        /* MÓVIL */
+        /* ========================= */
+
+        @media (max-width:600px) {
+            .container {
+                margin: 30px auto;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+                white-space: normal;
+            }
+
+            .icons {
+                gap: 15px;
+            }
+
+            .icon-card {
+                width: 85px; /* Tamaño cómodo para celulares */
+                height: 85px;
+            }
+
+            footer {
+                padding: 18px 12px;
+            }
+
+            footer a {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+
+        /* ========================= */
+        /* MÓVILES PEQUEÑOS */
+        /* ========================= */
+
+        @media (max-width:380px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            .icon-card {
+                width: 70px;
+                height: 70px;
+            }
         }
     </style>
 </head>
+
 <body>
 
+    <div class="container">
 
-    <main>
-        <section id="hero">
-            <h1>Jesus Maximiliano Ortega Valencia</h1>
-            <p class="main_informatio><strong>Desarrollador enfocado en Ciencia de Datos y Automatización.</strong></p>
-            <div class="skills">
-                <h2>Herramientas</h2>
-                <ul>
-                    <li>n8n</li>
-                    <li>Evolution API</li>
-                    <li>Python</li>
-                    <li>Git</li>
-                    <li>FastAPI</li>
-                    <li>Gemini SDK</li>
-                </ul>
+        <h1>Jesus Maximiliano Ortega Valencia</h1>
+
+        <p>Estudiante</p>
+
+        <div class="icons">
+            <div class="icon-card">
+                <img src="img/word.png" alt="Word">
             </div>
-            
-        </section>
-    </main>
+
+            <div class="icon-card">
+                <img src="img/excel.png" alt="Excel">
+            </div>
+
+            <div class="icon-card">
+                <img src="img/docs.png" alt="Google Docs">
+            </div>
+
+            <div class="icon-card">
+                <img src="img/sheets.png" alt="Google Sheets">
+            </div>
+
+            <div class="icon-card">
+                <img src="img/canva.png" alt="Canva">
+            </div>
+        </div>
+
+        <p class="small">
+            Organización · Atención al detalle · Seguimiento de procesos
+        </p>
+
+    </div>
 
     <footer>
         <section id="contacto">
             <h2>Contacto</h2>
             <p>¿Tienes un proyecto en mente? Hablemos.</p>
-            <a href="mailto:ortegajesusmaximiliano@gmail.com">Enviar correo</a>
+
+            <a href="mailto:ortegajesusmaximiliano@gmail.com">
+                Enviar correo
+            </a>
         </section>
+
         <hr>
-        <p>&copy; 2026 Jesus Ortega.</p>
+
+        <p>&copy; 2026 Jesus Ortega. Todos los derechos reservados.</p>
     </footer>
 
 </body>
+
 </html>
